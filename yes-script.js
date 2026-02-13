@@ -2,6 +2,14 @@ let musicPlaying = false
 
 window.addEventListener('load', () => {
     launchConfetti()
+    setTimeout(() => {
+    confetti({
+        particleCount: 200,
+        spread: 120,
+        origin: { y: 0.4 }
+    })
+}, 1500)
+
 
     // Autoplay music (works since user clicked Yes to get here)
     const music = document.getElementById('bg-music')
