@@ -204,3 +204,58 @@ h1 {
     width: 260px;
     height: 260px;
 }
+
+/* ===== Scattered Memories ===== */
+
+.memory-photos {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.memory {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    opacity: 0.85;
+    transition: transform 0.4s ease;
+}
+
+/* Top row */
+.m1 { top: 5%; left: 5%; transform: rotate(-8deg); }
+.m2 { top: 8%; left: 20%; transform: rotate(6deg); }
+.m3 { top: 6%; right: 22%; transform: rotate(-10deg); }
+.m4 { top: 5%; right: 5%; transform: rotate(8deg); }
+
+/* Middle sides */
+.m5 { top: 35%; left: 3%; transform: rotate(5deg); }
+.m6 { top: 38%; right: 3%; transform: rotate(-6deg); }
+
+/* Bottom row */
+.m7 { bottom: 6%; left: 6%; transform: rotate(-7deg); }
+.m8 { bottom: 8%; left: 25%; transform: rotate(9deg); }
+.m9 { bottom: 6%; right: 25%; transform: rotate(-5deg); }
+.m10 { bottom: 5%; right: 6%; transform: rotate(7deg); }
+
+/* Soft floating animation */
+@keyframes floatMemory {
+    0% { transform: translateY(0) rotate(var(--rot)); }
+    50% { transform: translateY(-8px) rotate(var(--rot)); }
+    100% { transform: translateY(0) rotate(var(--rot)); }
+}
+
+.m1 { --rot: -8deg; animation: floatMemory 6s ease-in-out infinite; }
+.m2 { --rot: 6deg; animation: floatMemory 7s ease-in-out infinite; }
+.m3 { --rot: -10deg; animation: floatMemory 5.5s ease-in-out infinite; }
+.m4 { --rot: 8deg; animation: floatMemory 6.5s ease-in-out infinite; }
+.m5 { --rot: 5deg; animation: floatMemory 7.5s ease-in-out infinite; }
+.m6 { --rot: -6deg; animation: floatMemory 6.8s ease-in-out infinite; }
+.m7 { --rot: -7deg; animation: floatMemory 5.8s ease-in-out infinite; }
+.m8 { --rot: 9deg; animation: floatMemory 7.2s ease-in-out infinite; }
+.m9 { --rot: -5deg; animation: floatMemory 6.2s ease-in-out infinite; }
+.m10 { --rot: 7deg; animation: floatMemory 7.8s ease-in-out infinite; }
+
