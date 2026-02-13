@@ -1,22 +1,24 @@
 let musicPlaying = false
+let confettiInterval = null
 
 window.addEventListener('load', () => {
-    launchConfetti()
-    setTimeout(() => {
-    confetti({
-        particleCount: 200,
-        spread: 120,
-        origin: { y: 0.4 }
-    })
-}, 1500)
-
-
-    // Autoplay music (works since user clicked Yes to get here)
     const music = document.getElementById('bg-music')
+
+    // ---- MUSIC ----
     music.volume = 0.3
-    music.play().catch(() => {})
-    musicPlaying = true
-    document.getElementById('music-toggle').textContent = '🔊'
+
+    // Try autoplay (allowed since user clicked "Yes" to reach this page)
+    music.play().then(() => {
+        musicPlaying = true
+        document.getElementById('music-toggle').textContent = '🔊'
+    }).catch(() => {
+        // If browser blocks it, user can start it manually
+        musicPlaying = false
+        document.getElementById('music-toggle').textContent = '🔇'
+    })
+
+    // ---- CONFETTI ----
+    launchConfetti()
 })
 
 function launchConfetti() {
@@ -28,64 +30,40 @@ function launchConfetti() {
 
     // Big opening burst
     confetti({
-        particleCount: 200,
-        spread: 120,
-        origin: { y: 0.4 },
+        particleCount: 250,
+        spread: 140,
+        origin: { y: 0.45 },
         colors
     })
 
     // Continuous gentle fireworks
-    setInterval(() => {
+    confettiInterval = setInterval(() => {
         confetti({
-            particleCount: 50,
-            spread: 90,
-            startVelocity: 25,
-            gravity: 0.8,
-            ticks: 300,
+            particleCount: 60,
+            spread: 100,
+            startVelocity: 30,
+            gravity: 0.9,
+            ticks: 350,
             origin: {
                 x: Math.random(),
                 y: Math.random() * 0.4
             },
             colors
         })
-    }, 1200)
-}
-
-
-    // Continuous side cannons
-    const interval = setInterval(() => {
-        if (Date.now() > end) {
-            clearInterval(interval)
-            return
-        }
-
-        confetti({
-            particleCount: 40,
-            angle: 60,
-            spread: 55,
-            origin: { x: 0, y: 0.6 },
-            colors
-        })
-
-        confetti({
-            particleCount: 40,
-            angle: 120,
-            spread: 55,
-            origin: { x: 1, y: 0.6 },
-            colors
-        })
-    }, 300)
+    }, 900)
 }
 
 function toggleMusic() {
     const music = document.getElementById('bg-music')
+
     if (musicPlaying) {
         music.pause()
         musicPlaying = false
         document.getElementById('music-toggle').textContent = '🔇'
     } else {
-        music.play()
-        musicPlaying = true
-        document.getElementById('music-toggle').textContent = '🔊'
+        music.play().then(() => {
+            musicPlaying = true
+            document.getElementById('music-toggle').textContent = '🔊'
+        })
     }
 }
