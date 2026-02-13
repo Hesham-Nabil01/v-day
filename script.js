@@ -29,7 +29,6 @@ const yesTeasePokes = [
 ]
 
 let yesTeasedCount = 0
-
 let noClickCount = 0
 let runawayEnabled = false
 let musicPlaying = true
@@ -39,17 +38,29 @@ const yesBtn = document.getElementById('yes-btn')
 const noBtn = document.getElementById('no-btn')
 const music = document.getElementById('bg-music')
 
-// Autoplay: audio starts muted (bypasses browser policy), unmute immediately
-music.muted = true
-music.volume = 0.3
-music.play().then(() => {
-    music.muted = false
-}).catch(() => {
-    // Fallback: unmute on first interaction
-    document.addEventListener('click', () => {
+// WINDOW LOAD EVENT: This handles the loading screen and music start
+window.addEventListener('load', () => {
+    // 1. Hide the loading screen
+    const overlay = document.getElementById('loading-overlay');
+    if (overlay) {
+        overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.display = 'none';
+        }, 500);
+    }
+
+    // 2. Try to autoplay music
+    music.muted = true
+    music.volume = 0.3
+    music.play().then(() => {
         music.muted = false
-        music.play().catch(() => {})
-    }, { once: true })
+    }).catch(() => {
+        // Fallback: unmute on first interaction
+        document.addEventListener('click', () => {
+            music.muted = false
+            music.play().catch(() => {})
+        }, { once: true })
+    })
 })
 
 function toggleMusic() {
@@ -73,8 +84,6 @@ function handleYesClick() {
         return
     }
 
-    const music = document.getElementById('bg-music')
-
     // Fade out music
     let fadeAudio = setInterval(() => {
         if (music.volume > 0.05) {
@@ -93,8 +102,6 @@ function handleYesClick() {
         window.location.href = 'yes.html'
     }, 800)
 }
-
-
 
 function showTeaseMessage(msg) {
     let toast = document.getElementById('tease-toast')
@@ -163,5 +170,4 @@ function runAway() {
     noBtn.style.top = `${randomY}px`
     noBtn.style.zIndex = '50'
     noBtn.style.transform = "rotate(" + (Math.random() * 30 - 15) + "deg)"
-
 }
