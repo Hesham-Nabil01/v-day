@@ -48,17 +48,6 @@ body {
     content: '💖 💕 💗 💓 💝 💖 💕 💗 💓 💝';
 }
 
-.hearts-bg span {
-    position: absolute;
-    top: 100%;
-    left: 30%;
-    font-size: 1.4rem;
-    opacity: 0.2;
-    animation: floatHearts 10s linear infinite;
-}
-
-
-
 @keyframes floatHearts {
     from { transform: translateY(0); opacity: 0.15; }
     to { transform: translateY(-110vh); opacity: 0; }
