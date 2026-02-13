@@ -232,8 +232,8 @@ h1 {
 .m4 { top: 5%; right: 5%; transform: rotate(8deg); }
 
 /* Middle sides */
-.m5 { top: 40%; left: 6%; transform: rotate(5deg); }
-.m6 { top: 43%; right: 6%; transform: rotate(-6deg); }
+.m5 { top: 50%; left: 6%; transform: rotate(5deg); }
+.m6 { top: 50%; right: 6%; transform: rotate(-6deg); }
 
 /* Bottom row */
 .m7 { bottom: 6%; left: 6%; transform: rotate(-7deg); }
