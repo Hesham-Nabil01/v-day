@@ -284,18 +284,18 @@ h1 {
 }
 
 .m13 {
-    top: 50%;
-    left: 12%;
-    transform: rotate(-8deg);
+    top: 47%;
+    left: 10%;
+    transform: rotate(6deg);
     --rot: -8deg;
     animation: floatMemoryMain 6.5s ease-in-out infinite;
     z-index: 1;
 }
 
 .m14 {
-    top: 55%;
-    right: 12%;
-    transform: rotate(7deg);
+    top: 58%;
+    right: 10%;
+    transform: rotate(-7deg);
     --rot: 7deg;
     animation: floatMemoryMain 7s ease-in-out infinite;
     z-index: 1;
