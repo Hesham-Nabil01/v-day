@@ -66,44 +66,15 @@ function toggleMusic() {
 }
 
 function handleYesClick() {
-    if (!runawayEnabled && noClickCount < 2) {
+    if (!runawayEnabled) {
+        // Tease her to try No first
         const msg = yesTeasePokes[Math.min(yesTeasedCount, yesTeasePokes.length - 1)]
         yesTeasedCount++
         showTeaseMessage(msg)
         return
     }
-
-    const music = document.getElementById('bg-music')
-
-    // Fade out music
-    let fadeAudio = setInterval(() => {
-        if (music.volume > 0.05) {
-            music.volume -= 0.05
-        } else {
-            clearInterval(fadeAudio)
-            music.pause()
-        }
-    }, 50)
-
-    // Fade out page
-    document.body.style.transition = "opacity 0.8s ease"
-    document.body.style.opacity = "0"
-
-    setTimeout(() => {
-        window.location.href = 'yes.html'
-    }, 800)
+    window.location.href = 'yes.html'
 }
-
-
-    // Dramatic fade out before redirect
-    document.body.style.transition = "opacity 0.6s ease"
-    document.body.style.opacity = "0"
-
-    setTimeout(() => {
-        window.location.href = 'yes.html'
-    }, 600)
-}
-
 
 function showTeaseMessage(msg) {
     let toast = document.getElementById('tease-toast')
@@ -171,6 +142,4 @@ function runAway() {
     noBtn.style.left = `${randomX}px`
     noBtn.style.top = `${randomY}px`
     noBtn.style.zIndex = '50'
-    noBtn.style.transform = "rotate(" + (Math.random() * 30 - 15) + "deg)"
-
 }
