@@ -29,21 +29,35 @@ body {
 
 .hearts-bg::before,
 .hearts-bg::after {
-    content: '💕 💗 💖 💝 💓';
+    content: '💕 💗 💖 💝 💓 💕 💗 💖 💝 💓';
     position: absolute;
-    font-size: 1.5rem;
-    opacity: 0.15;
-    animation: floatHearts 12s linear infinite;
+    font-size: 1.6rem;
+    opacity: 0.22;
+    animation: floatHearts 8s linear infinite;
     white-space: nowrap;
     top: 100%;
-    left: 10%;
+    left: 8%;
 }
 
+
 .hearts-bg::after {
-    animation-delay: 6s;
-    left: 60%;
-    content: '💗 💕 💓 💖 💝';
+    animation-delay: 2s;
+    left: 55%;
+    font-size: 1.3rem;
+    opacity: 0.18;
+    content: '💖 💕 💗 💓 💝 💖 💕 💗 💓 💝';
 }
+
+.hearts-bg span {
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    font-size: 1.4rem;
+    opacity: 0.2;
+    animation: floatHearts 10s linear infinite;
+}
+
+
 
 @keyframes floatHearts {
     from { transform: translateY(0); opacity: 0.15; }
