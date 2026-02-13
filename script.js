@@ -66,21 +66,34 @@ function toggleMusic() {
 }
 
 function handleYesClick() {
-    if (!runawayEnabled) {
+    if (!runawayEnabled && noClickCount < 2) {
         const msg = yesTeasePokes[Math.min(yesTeasedCount, yesTeasePokes.length - 1)]
         yesTeasedCount++
         showTeaseMessage(msg)
         return
     }
 
-    // Dramatic fade out before redirect
-    document.body.style.transition = "opacity 0.6s ease"
+    const music = document.getElementById('bg-music')
+
+    // Fade out music
+    let fadeAudio = setInterval(() => {
+        if (music.volume > 0.05) {
+            music.volume -= 0.05
+        } else {
+            clearInterval(fadeAudio)
+            music.pause()
+        }
+    }, 50)
+
+    // Fade out page
+    document.body.style.transition = "opacity 0.8s ease"
     document.body.style.opacity = "0"
 
     setTimeout(() => {
         window.location.href = 'yes.html'
-    }, 600)
+    }, 800)
 }
+
 
 
 function showTeaseMessage(msg) {
