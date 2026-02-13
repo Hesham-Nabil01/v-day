@@ -293,6 +293,38 @@ h1 {
     animation: floatMemoryMain 6s ease-in-out infinite;
 }
 
+/* ===== Main page extra images (img 13 & 14) ===== */
+
+.m13, .m14 {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+    opacity: 0.9;
+    position: absolute;
+    transition: transform 0.5s ease;
+}
+
+/* Left side */
+.m13 {
+    top: 32%;
+    left: 6%;
+    --rot: -6deg;
+    transform: rotate(-6deg);
+    animation: floatMemoryMain 6.5s ease-in-out infinite;
+}
+
+/* Right side */
+.m14 {
+    top: 32%;
+    right: 6%;
+    --rot: 6deg;
+    transform: rotate(6deg);
+    animation: floatMemoryMain 7s ease-in-out infinite;
+}
+
+
 /* Floating animation for main page images */
 @keyframes floatMemoryMain {
     0% { transform: translateY(0) rotate(var(--rot)); }
