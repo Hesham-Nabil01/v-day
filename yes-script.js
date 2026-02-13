@@ -20,17 +20,37 @@ window.addEventListener('load', () => {
 })
 
 function launchConfetti() {
-    const colors = ['#ff69b4', '#ff1493', '#ff85a2', '#ffb3c1', '#ff0000', '#ff6347', '#fff', '#ffdf00']
-    const duration = 6000
-    const end = Date.now() + duration
+    const colors = [
+        '#ff69b4', '#ff1493', '#ff85a2',
+        '#ffb3c1', '#ff0000', '#ff6347',
+        '#ffffff', '#ffdf00'
+    ]
 
-    // Initial big burst
+    // Big opening burst
     confetti({
-        particleCount: 150,
-        spread: 100,
-        origin: { x: 0.5, y: 0.3 },
+        particleCount: 200,
+        spread: 120,
+        origin: { y: 0.4 },
         colors
     })
+
+    // Continuous gentle fireworks
+    setInterval(() => {
+        confetti({
+            particleCount: 50,
+            spread: 90,
+            startVelocity: 25,
+            gravity: 0.8,
+            ticks: 300,
+            origin: {
+                x: Math.random(),
+                y: Math.random() * 0.4
+            },
+            colors
+        })
+    }, 1200)
+}
+
 
     // Continuous side cannons
     const interval = setInterval(() => {
