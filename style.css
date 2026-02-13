@@ -56,15 +56,6 @@ body {
     text-align: center;
     padding: 40px 20px;
 }
-.container {
-    background: rgba(255, 240, 245, 0.85);
-    backdrop-filter: blur(6px);
-    border-radius: 28px;
-    padding: 50px 40px;
-    max-width: 820px;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-}
-
 
 h1 {
     font-size: 2.4rem;
@@ -241,8 +232,8 @@ h1 {
 .m4 { top: 5%; right: 5%; transform: rotate(8deg); }
 
 /* Middle sides */
-.m5 { top: 35%; left: 3%; transform: rotate(5deg); }
-.m6 { top: 38%; right: 3%; transform: rotate(-6deg); }
+.m5 { top: 40%; left: 6%; transform: rotate(5deg); }
+.m6 { top: 43%; right: 6%; transform: rotate(-6deg); }
 
 /* Bottom row */
 .m7 { bottom: 6%; left: 6%; transform: rotate(-7deg); }
