@@ -264,13 +264,14 @@ h1 {
 .m10 { --rot: 7deg; animation: floatMemory 7.8s ease-in-out infinite; bottom: 5%; right: 6%; transform: rotate(7deg); }
 
 
-/* ===== Main page floating images (scattered) ===== */
+/* Main page floating images (scattered, updated) */
 .m11 {
     top: 15%;
     left: 5%;
     transform: rotate(-5deg);
     --rot: -5deg;
     animation: floatMemoryMain 6s ease-in-out infinite;
+    z-index: 1;
 }
 
 .m12 {
@@ -279,23 +280,27 @@ h1 {
     transform: rotate(5deg);
     --rot: 5deg;
     animation: floatMemoryMain 6s ease-in-out infinite;
+    z-index: 1;
 }
 
 .m13 {
-    top: 40%;
+    top: 50%;
     left: 12%;
     transform: rotate(-8deg);
     --rot: -8deg;
     animation: floatMemoryMain 6.5s ease-in-out infinite;
+    z-index: 1;
 }
 
 .m14 {
-    top: 45%;
+    top: 55%;
     right: 12%;
     transform: rotate(7deg);
     --rot: 7deg;
     animation: floatMemoryMain 7s ease-in-out infinite;
+    z-index: 1;
 }
+
 
 /* Floating animation for main page images */
 @keyframes floatMemoryMain {
