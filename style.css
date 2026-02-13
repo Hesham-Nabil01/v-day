@@ -263,67 +263,39 @@ h1 {
 .m9 { --rot: -5deg; animation: floatMemory 6.2s ease-in-out infinite; bottom: 3%; right: 25%; transform: rotate(-5deg); }
 .m10 { --rot: 7deg; animation: floatMemory 7.8s ease-in-out infinite; bottom: 5%; right: 6%; transform: rotate(7deg); }
 
-/* ===== Main page special images ===== */
-.m11, .m12 {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
-    opacity: 0.9;
-    transition: transform 0.5s ease;
-    position: absolute;
-}
 
-/* Left image */
+/* ===== Main page floating images (scattered) ===== */
 .m11 {
-    top: 20%;
+    top: 15%;
     left: 5%;
     transform: rotate(-5deg);
     --rot: -5deg;
     animation: floatMemoryMain 6s ease-in-out infinite;
 }
 
-/* Right image */
 .m12 {
-    top: 20%;
+    top: 18%;
     right: 5%;
     transform: rotate(5deg);
     --rot: 5deg;
     animation: floatMemoryMain 6s ease-in-out infinite;
 }
 
-/* ===== Main page extra images (img 13 & 14) ===== */
-
-.m13, .m14 {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
-    opacity: 0.9;
-    position: absolute;
-    transition: transform 0.5s ease;
-}
-
-/* Left side */
 .m13 {
-    top: 32%;
-    left: 6%;
-    --rot: -6deg;
-    transform: rotate(-6deg);
+    top: 40%;
+    left: 12%;
+    transform: rotate(-8deg);
+    --rot: -8deg;
     animation: floatMemoryMain 6.5s ease-in-out infinite;
 }
 
-/* Right side */
 .m14 {
-    top: 32%;
-    right: 6%;
-    --rot: 6deg;
-    transform: rotate(6deg);
+    top: 45%;
+    right: 12%;
+    transform: rotate(7deg);
+    --rot: 7deg;
     animation: floatMemoryMain 7s ease-in-out infinite;
 }
-
 
 /* Floating animation for main page images */
 @keyframes floatMemoryMain {
