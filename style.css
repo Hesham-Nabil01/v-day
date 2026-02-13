@@ -274,7 +274,18 @@ h1 {
     z-index: 1;
 }
 
+/* Swap: originally .m12 on right, now .m13 takes that spot */
 .m12 {
+    top: 50%;
+    left: 12%;
+    transform: rotate(-8deg);
+    --rot: -8deg;
+    animation: floatMemoryMain 6.5s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* Swap: originally .m13 on left, now .m12 takes that spot */
+.m13 {
     top: 18%;
     right: 5%;
     transform: rotate(5deg);
@@ -283,23 +294,15 @@ h1 {
     z-index: 1;
 }
 
-.m13 {
-    top: 47%;
-    left: 10%;
-    transform: rotate(6deg);
-    --rot: -8deg;
-    animation: floatMemoryMain 6.5s ease-in-out infinite;
-    z-index: 1;
-}
-
 .m14 {
-    top: 58%;
-    right: 10%;
-    transform: rotate(-7deg);
+    top: 55%;
+    right: 12%;
+    transform: rotate(7deg);
     --rot: 7deg;
     animation: floatMemoryMain 7s ease-in-out infinite;
     z-index: 1;
 }
+
 
 
 /* Floating animation for main page images */
