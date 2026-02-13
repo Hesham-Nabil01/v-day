@@ -305,8 +305,8 @@ h1 {
 
 /* Make memories m10 through m14 bigger */
 .m10, .m11, .m12, .m13, .m14 {
-    width: 200px;   /* Increased from 220px */
-    height: 200px;  /* Increased from 220px */
+    width: 250px;   /* Increased from 220px */
+    height: 250px;  /* Increased from 220px */
     z-index: 2;     /* Brings them slightly forward */
 }
 
