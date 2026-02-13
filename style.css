@@ -226,15 +226,15 @@ h1 {
 }
 
 /* Top row */
-.m2 { top: 4%; left: 20%; transform: rotate(6deg); }
-.m3 { top: 2%; right: 22%; transform: rotate(-10deg); }
+.m2 { top: 3%; left: 20%; transform: rotate(6deg); }
+.m3 { top: 1%; right: 22%; transform: rotate(-10deg); }
 
 .m3 { top: 6%; right: 22%; transform: rotate(-10deg); }
 .m4 { top: 5%; right: 5%; transform: rotate(8deg); }
 
 /* Middle sides */
-.m5 { top: 48%; left: 3%; transform: rotate(5deg); }
-.m6 { top: 50%; right: 3%; transform: rotate(-6deg); }
+.m5 { top: 53%; left: 3%; transform: rotate(5deg); }
+.m6 { top: 58%; right: 3%; transform: rotate(-6deg); }
 
 /* Bottom row */
 .m7 { bottom: 6%; left: 6%; transform: rotate(-7deg); }
