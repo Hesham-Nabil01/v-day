@@ -253,14 +253,14 @@ h1 {
 
 /* ===== Yes-page memory images ===== */
 .m1 { --rot: -8deg; animation: floatMemory 6s ease-in-out infinite; top: 5%; left: 5%; transform: rotate(-8deg); }
-.m2 { --rot: 6deg; animation: floatMemory 7s ease-in-out infinite; top: 8%; left: 20%; transform: rotate(6deg); }
-.m3 { --rot: -10deg; animation: floatMemory 5.5s ease-in-out infinite; top: 6%; right: 22%; transform: rotate(-10deg); }
+.m2 { --rot: 6deg; animation: floatMemory 7s ease-in-out infinite; top: 4%; left: 20%; transform: rotate(6deg); }
+.m3 { --rot: -10deg; animation: floatMemory 5.5s ease-in-out infinite; top: 3%; right: 22%; transform: rotate(-10deg); }
 .m4 { --rot: 8deg; animation: floatMemory 6.5s ease-in-out infinite; top: 5%; right: 5%; transform: rotate(8deg); }
 .m5 { --rot: 5deg; animation: floatMemory 7.5s ease-in-out infinite; top: 35%; left: 3%; transform: rotate(5deg); }
 .m6 { --rot: -6deg; animation: floatMemory 6.8s ease-in-out infinite; top: 38%; right: 3%; transform: rotate(-6deg); }
 .m7 { --rot: -7deg; animation: floatMemory 5.8s ease-in-out infinite; bottom: 6%; left: 6%; transform: rotate(-7deg); }
-.m8 { --rot: 9deg; animation: floatMemory 7.2s ease-in-out infinite; bottom: 8%; left: 25%; transform: rotate(9deg); }
-.m9 { --rot: -5deg; animation: floatMemory 6.2s ease-in-out infinite; bottom: 6%; right: 25%; transform: rotate(-5deg); }
+.m8 { --rot: 9deg; animation: floatMemory 7.2s ease-in-out infinite; bottom: 4%; left: 25%; transform: rotate(9deg); }
+.m9 { --rot: -5deg; animation: floatMemory 6.2s ease-in-out infinite; bottom: 3%; right: 25%; transform: rotate(-5deg); }
 .m10 { --rot: 7deg; animation: floatMemory 7.8s ease-in-out infinite; bottom: 5%; right: 6%; transform: rotate(7deg); }
 
 /* ===== Main page special images ===== */
